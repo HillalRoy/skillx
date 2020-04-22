@@ -1,0 +1,47 @@
+.home{
+  display: grid;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+
+}
+.action-btn{
+  display: inline;
+  font-size: 1.3em;
+  background-color: var(--color-acent);
+  outline: none;
+  border: none;
+  padding: .2em 2em;
+  border: 1px solid var(--color-dark-border);
+}
+
+.animated-text{
+
+  font-size: 5em;
+  display: flex;
+  div{
+    color: var(--color-acent);
+  }
+}
+
+
+
+
+// Animation
+
+.action-btn-enter{
+  opacity: .01;
+}
+
+.action-btn-enter.action-btn-enter-active{
+  opacity: 1;
+  transition: opacity .93s ease-in;
+}
+.naction-btname-leave {
+  opacity: 1;
+}
+
+.action-btn-leave.action-btn-leave-active{
+  opacity: .01;
+  transition: opacity .93s ease-in;
+}
