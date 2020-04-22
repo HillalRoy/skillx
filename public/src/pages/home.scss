@@ -1,47 +1,56 @@
-.home{
-  display: grid;
-  height: 100vh;
-  align-items: center;
-  justify-content: center;
+$tablet-width: 768px;
+$desktop-width: 1024px;
 
-}
-.action-btn{
-  display: inline;
-  font-size: 1.3em;
-  background-color: var(--color-acent);
-  outline: none;
-  border: none;
-  padding: .2em 2em;
-  border: 1px solid var(--color-dark-border);
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1}){
+    @content;
+  }
 }
 
-.animated-text{
-
-  font-size: 5em;
-  display: flex;
-  div{
-    color: var(--color-acent);
+@mixin desktop {
+  @media(min-width: #{$desktop-width}){
+    @content;
   }
 }
 
 
+div.home{
+  display: grid;
+  height: 100vh;
+  padding: 0 10px;
+  align-items: center;
+  // justify-content: center;
+  text-align: left;
+  padding: 0 10px;
+
+  @include desktop{
+    padding: 0 100px;
 
 
-// Animation
+  }
 
-.action-btn-enter{
-  opacity: .01;
+}
+.action-btn{
+  // display: block;
+  font-size: 1.3em;
+  border-radius: 0 10px 0 10px;
+  background-color: lighten($color: #FB9455 , $amount: 10);
+  outline: none;
+  border: none;
+  padding: .2em 2em;
+  margin: 20px;
+  margin-top: 40px;
+  margin-left: 0;
+  // border: 1px solid var(--color-dark-border);
 }
 
-.action-btn-enter.action-btn-enter-active{
-  opacity: 1;
-  transition: opacity .93s ease-in;
-}
-.naction-btname-leave {
-  opacity: 1;
-}
+.animated-text{
 
-.action-btn-leave.action-btn-leave-active{
-  opacity: .01;
-  transition: opacity .93s ease-in;
+  font-size: 2.5em;
+  font-weight: 600;
+  display: flex;
+  div{
+    margin-left: .5em;
+    color: var(--color-acent);
+  }
 }

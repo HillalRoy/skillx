@@ -1,20 +1,8 @@
 import React from 'react';
 import './about.scss';
+import {Card} from '../components';
 // import {TimelineMax} from 'gsap';
-import {Tween} from 'react-gsap';
-/**
- *
- * @param {React.Props} propes
- * @return {JSX.Element}
- */
-function UserDetail(propes) {
-  return (<div className="animated-text">
-    <Tween from={{y: '100px', opacity: '0'}}>
-      <div>vv</div>
-    </Tween>
-  </div>);
-}
-
+// import {Tween} from 'react-gsap';
 
 /**
  * This Home Page
@@ -35,9 +23,19 @@ export default class About extends React.Component {
   render() {
     return (
       <div className="about" id="About" >
-        <div>
-          <UserDetail/>
-          <UserDetail/>
+        <div className="cards">
+          <Card
+            name="Hillal Kumar Roy"
+            roll="15"
+            number="7076055679"/>
+          <Card
+            name="Ankit Das"
+            roll="5"
+            number="9007922146"/>
+          <Card
+            name="Pronoy Roy"
+            roll="25"
+            number="7430062317"/>
         </div>
       </div>);
   }

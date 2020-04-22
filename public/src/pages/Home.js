@@ -9,9 +9,9 @@ import {Tween} from 'react-gsap';
  */
 function AnimatedHaeding(propes) {
   return (<div className="animated-text">
-    Animated
+    Our project
     <Tween from={{y: '100px', opacity: '0'}}>
-      <div> text</div>
+      <div>Name</div>
     </Tween>
   </div>);
 }
@@ -25,7 +25,7 @@ function AnimatedHaeding(propes) {
 function ActionButton(propes) {
   return (
     <Tween from={{y: '20px', opacity: '0.1'}}>
-      <button className="action-btn">Action</button>
+      <button className="action-btn">Open</button>
     </Tween>);
 }
 
@@ -50,8 +50,7 @@ export default class Home extends React.Component {
       <div className="home" id="Home" >
         <div>
           <AnimatedHaeding/>
-          <ActionButton> </ActionButton>
-          <ActionButton> </ActionButton>
+          <ActionButton/>
         </div>
       </div>);
   }

@@ -44,7 +44,7 @@ export default class Nav extends React.Component {
  */
 function ListItem(props) {
   return (
-    <li><a href={props.to}> {props.children} </a></li>
+    <li><a href={props.to} className={props.className}> {props.children} </a></li>
   );
 }
 export {ListItem, Nav};

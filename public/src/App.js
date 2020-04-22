@@ -1,22 +1,25 @@
 import React from 'react';
 // import logo from './logo.svg';
 import './App.css';
-import {Nav, ListItem} from './components/nav';
+import {Nav, ListItem} from './components';
 import {Home, About} from './pages';
 
 /**
- * @return {JSX}
+ *
+ * *App is the entry point of this project
+ *
+ * @return {JSX.Element}
  */
 function App() {
   return (
     <div className="App">
       <Nav>
-        <ListItem to="#Home">Home</ListItem>
-        <ListItem to="#About">About</ListItem>
+        <ListItem className="home" to="#Home">Home</ListItem>
+        <ListItem to="#About" className="about">About</ListItem>
       </Nav>
       <section>
         <div></div>
-        <Home />
+        <Home/>
         <About/>
       </section>
     </div>

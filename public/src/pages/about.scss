@@ -1,6 +1,47 @@
-.about{
-  height: 100vh;
-  display: grid;
-  justify-content: center;
-  align-items: center;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media(min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+
+div.about {
+  --padding: 0 10px;
+
+  @include desktop {
+    --padding: 0 100px;
+
+  }
+
+  // display: block;
+  // width: 100vw;
+  padding: var(--padding);
+
+  * {
+    margin: auto;
+
+  }
+
+  .cards {
+    // width: 100vw;
+    display: grid;
+    min-height: 100vh;
+
+    justify-content: center;
+    align-items: center;
+
+    @include desktop {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
 }
